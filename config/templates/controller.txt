@@ -1,0 +1,21 @@
+import React from 'react';
+import {observer} from 'mobx-react';
+import BaseLayoutView from '../../../../../../components/BaseLayoutView';
+import ${name}ViewModel from '../ViewModels/${name}ViewModel';
+import ${name}View from '../Views/${name}View';
+
+interface Props {
+  viewModel: ${name}ViewModel;
+}
+
+const ${name}Controller = observer(({viewModel}: Props) => {
+  return (
+    <BaseLayoutView
+      title="${name}"
+      loading={false}>
+      <${name}View />
+    </BaseLayoutView>
+  );
+});
+
+export default ${name}Controller;
